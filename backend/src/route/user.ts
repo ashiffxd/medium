@@ -7,7 +7,7 @@ import { signupInput, signinInput } from "@100xdevs/medium-common";
 export const userRouter = new Hono<{
     Bindings: {
         DATABASE_URL: string;
-        JWT_SECRET: string;
+        secret: string;
     }
 }>();
 
@@ -34,7 +34,7 @@ userRouter.post('/signup', async (c) => {
       })
       const jwt = await sign({
         id: user.id
-      }, c.env.JWT_SECRET);
+      }, c.env.secret);
   
       return c.text(jwt)
     } catch(e) {
@@ -74,7 +74,7 @@ userRouter.post('/signup', async (c) => {
       }
       const jwt = await sign({
         id: user.id
-      }, c.env.JWT_SECRET);
+      }, c.env.secret);
   
       return c.text(jwt)
     } catch(e) {

@@ -8,6 +8,8 @@ import axios from "axios";
     "id" : number;
     "author" :{
         "name" : string;
+        "username" : string;
+        
     }
 
 
@@ -23,8 +25,8 @@ export const useBlog=( {id} : {id:string}) =>{
             }
         })
         .then(response=>{
-            console.log("Fetched blogs:", response.data); 
-            setBlog(response.data.blogs);
+            console.log("Fetched blogs:", response.data.blog.title); 
+            setBlog(response.data.blog);
             setLoading(false);
         })
     } , [id])

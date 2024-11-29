@@ -18,15 +18,29 @@ export const Auth =({type} : {type: "signup" | "signin"})=>{
 
   async function sendRequest(){
     try{
+    
       const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type==="signup" ? "signup" : "signin"}` , postInputs);
-      console.log(response.data);
       const jwt =  response.data;
-      console.log(jwt);
+      const username =  postInputs.username;
+      
+     if(type=== "signup"){
       localStorage.setItem("token" , jwt);
+      localStorage.setItem("username" , username)
+      
+      
+     }
+      
+      else{
+        localStorage.setItem("token" , jwt);
+        localStorage.setItem("username" , username)
+      }
+      
       navigate("/blogs");
     }
     catch(e){
+    
       console.log(e);
+    
       alert("error while signing up");
 
     }
