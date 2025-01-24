@@ -6,8 +6,6 @@
   },
   "dependencies": {
     "@100xdevs/medium-common": "^1.0.0",
-    "@ashdev12/medium-blog": "^1.0.0",
-    "@ashdev12/medium-common": "^1.0.0",
     "@prisma/client": "^5.22.0",
     "@prisma/extension-accelerate": "^1.2.1",
     "@types/jsonwebtoken": "^9.0.7",
