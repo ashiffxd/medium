@@ -39,10 +39,18 @@ export const Deleteblog = ({ blog }: { blog: Blog }) => {
                   setTimeout(() => {
                     Navigate("/blogs");
                   }, 2000);
-                } catch (error) {
+                } catch (error: unknown) {
+                  let errorMessage = "Failed to delete the blog. Please try again.";
+
+                 
+                  if (axios.isAxiosError(error)) {
+                    errorMessage =
+                      error.response?.data?.message || "An error occurred while deleting the blog.";
+                  } else if (error instanceof Error) {
+                    errorMessage = error.message;
+                  }
+
                   console.error("Error deleting the blog:", error);
-                  const errorMessage =
-                    error.response?.data?.message || "Failed to delete the blog. Please try again.";
                   setResponseMessage(errorMessage); // Display error message if deletion fails
                   setShowMessage(true);
                 }
