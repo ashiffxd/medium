@@ -472,7 +472,7 @@ export const Welcome = () => {
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center">
-            <p>© 2025 BlogSphere. All rights reserved. Made with ❤️ for writers everywhere.</p>
+            <p>© 2025 Medium. All rights reserved. Made with ❤️ for writers everywhere.</p>
           </div>
         </div>
       </footer>
