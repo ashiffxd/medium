@@ -8,7 +8,7 @@ export const Welcome =()=>{
     <header className="flex justify-between items-center p-6 border-b">
       <div className="flex items-center space-x-2">
         <Feather className="text-blue-600" size={36} />
-        <h1 className="text-2xl font-bold text-gray-800">MyBlog</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Medium</h1>
       </div>
       <div className=" space-x-4">
       <button type="button" h-48 onClick={()=>{navigate("/signup")}} className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Signup</button>
