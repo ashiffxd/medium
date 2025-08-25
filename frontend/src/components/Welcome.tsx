@@ -328,7 +328,7 @@ export const Welcome = () => {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-4"
           >
-            {categories.map((category, index) => (
+            {categories.map((category) => (
               <motion.span
                 key={category}
                 variants={itemVariants}
