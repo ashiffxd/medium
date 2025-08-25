@@ -1,29 +1,24 @@
-import { Circle } from "./BlogCard"
+import { Circle } from "./BlogCard";
 
 export const BlogSkeleton = () => {
-    return <div role="status" className="animate-pulse">
-        <div className="p-4 border-b border-slate-200 pb-4 w-screen max-w-screen-md cursor-pointer">
-            <div className="flex">
-                <div className="h-4  bg-gray-200 rounded-full w-48 mb-4"></div>
-                <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
-                <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
-                <div className="pl-2 flex justify-center flex-col">
-                    <Circle />
-                </div>
-                <div className="pl-2 font-thin text-slate-500 text-sm flex justify-center flex-col">
-                    <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
-                </div>
-            </div>
-            <div className="text-xl font-semibold pt-2">
-                <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
-            </div>
-            <div className="text-md font-thin">
-                <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
-            </div>
-            <div className="text-slate-500 text-sm font-thin pt-4">
-                <div className="h-2 bg-gray-200 rounded-full mb-2.5"></div>
-            </div>
+  return (
+    <div role="status" className="animate-pulse max-w-screen-md w-full mx-auto p-6 bg-white/70 backdrop-blur-md rounded-2xl shadow-md border border-gray-200 cursor-pointer select-none">
+      <div className="flex items-center space-x-4 mb-6">
+        <div className="h-6 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 rounded-full w-48"></div>
+        <div className="flex space-x-2 items-center pl-2">
+          <Circle />
+          <div className="h-5 w-24 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 rounded-full" />
         </div>
-    <span className="sr-only">Loading...</span>
-</div>
-}
+      </div>
+
+      <div className="space-y-4">
+        <div className="h-8 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 rounded-full w-full"></div>
+        <div className="h-6 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 rounded-full w-5/6"></div>
+        <div className="h-6 bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 rounded-full w-3/4"></div>
+        <div className="h-4 bg-gradient-to-r from-gray-200 via-gray-150 to-gray-200 rounded-full w-2/5 mt-6"></div>
+      </div>
+
+      <span className="sr-only">Loading...</span>
+    </div>
+  );
+};
